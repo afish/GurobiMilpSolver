@@ -55,8 +55,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gurobi65.NET">
-      <HintPath>.\Gurobi65.NET.dll</HintPath>
+    <Reference Include="Gurobi65.NET, Version=6.5.0.0, Culture=neutral, PublicKeyToken=21e2c4b1860157bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\net40\Gurobi65.NET.dll</HintPath>
     </Reference>
     <Reference Include="MilpManager, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MilpManager.1.5.0.0\lib\net40\MilpManager.dll</HintPath>

@@ -13,8 +13,13 @@
     <releaseNotes>Version 1.0.0.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Gurobi MILP ILP MilpManager MilpSolver</tags>
+    <references>
+      <reference file="Gurobi65.NET.dll" />
+      <reference file="GurobiMilpSolver.dll" />
+    </references>
   </metadata>
   <files>
 	<file src="output\gurobi65.dll" target="output\gurobi65.dll" />
+    <file src="lib\net40\Gurobi65.NET.dll" target="lib\net40"/>
   </files>
 </package>
