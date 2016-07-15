@@ -23,7 +23,7 @@ namespace GurobiMilpManager.Implementation
 
         private void AddOne()
         {
-            One = Model.AddVar(1, 1, 0, GRB.INTEGER, NewVariableName());
+            One = Model.AddVar(1, 1, 0, GRB.INTEGER, "_v_predefinedOne");
             Model.Update();
         }
 
@@ -153,9 +153,9 @@ namespace GurobiMilpManager.Implementation
             return ConstraintIndex;
         }
 
-        protected override void InternalDeserialize(object o)
+        protected override void InternalDeserialize(object data)
         {
-            ConstraintIndex = (int) o;
+            ConstraintIndex = (int) data;
             foreach (var variable in Variables)
             {
                 var typed = variable.Value as GurobiVariable;
