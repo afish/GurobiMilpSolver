@@ -14,7 +14,7 @@ namespace GurobiMilpManager.Implementation
         private bool _disposed;
         private bool _hasGoal;
 
-        public GurobiMilpSolver(int integerWidth) : base(integerWidth)
+        public GurobiMilpSolver(int integerWidth, double epsilon = 0.000000001) : base(integerWidth, epsilon)
         {
             Environment = new GRBEnv();
             Model = new GRBModel(Environment);
