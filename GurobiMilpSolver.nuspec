@@ -18,7 +18,7 @@
       <reference file="GurobiMilpSolver.dll" />
     </references>	
 	<dependencies>
-	  <dependency id="MilpManager" version="2.0.0" />
+	  <dependency id="MilpManager" version="[2.0.0,3.0.0)" />
 	</dependencies>
   </metadata>
   <files>
