@@ -21,6 +21,13 @@ namespace GurobiMilpManager.Implementation
             AddOne();
         }
 
+        public GurobiMilpSolver(GRBEnv environment, GRBModel model, int integerWidth, double epsilon) : base(integerWidth, epsilon)
+        {
+            Environment = environment;
+            Model = model;
+            AddOne();
+        }
+
         private void AddOne()
         {
             One = Model.AddVar(1, 1, 0, GRB.INTEGER, "_v_predefinedOne");
