@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/afish/GurobiMilpSolver</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Version 1.1.1.</releaseNotes>
+    <releaseNotes>Version 1.1.3</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Gurobi MILP ILP MilpManager MilpSolver</tags>
     <references>
@@ -22,7 +22,8 @@
 	</dependencies>
   </metadata>
   <files>
-	<file src="output\gurobi65.dll" target="output\gurobi65.dll" />
+	<file src="output\x64\gurobi65.dll" target="output\x64\gurobi65.dll" />
+	<file src="output\x86\gurobi65.dll" target="output\x86\gurobi65.dll" />
     <file src="lib\net40\Gurobi65.NET.dll" target="lib\net40"/>
   </files>
 </package>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using Gurobi;
 using MilpManager.Abstraction;
 using MilpManager.Implementation;
@@ -7,6 +9,17 @@ namespace GurobiMilpManager.Implementation
 {
     public class GurobiMilpSolver : BaseMilpSolver, IDisposable
     {
+
+        static GurobiMilpSolver()
+        {
+            var architectureDirectory = System.Environment.Is64BitProcess ? "x64" : "x86";
+            var location = Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
+            var dllPath = Path.Combine(location, architectureDirectory);
+            string pathEnvironmentVariable = System.Environment.GetEnvironmentVariable("PATH");
+            string finalPath = $"{pathEnvironmentVariable};{dllPath};";
+            System.Environment.SetEnvironmentVariable("PATH", finalPath, EnvironmentVariableTarget.Process);
+        }
+
         public GRBEnv Environment { get; protected set; }
         public GRBModel Model { get; protected set; }
         public int ConstraintIndex { get; protected set; }
