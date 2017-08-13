@@ -176,7 +176,7 @@ namespace GurobiMilpManager.Implementation
 			ConstraintIndex = (int) data;
 			foreach (var variable in Variables)
 			{
-				var typed = variable.Value as GurobiVariable;
+				var typed = variable.Value as IGurobiVariable;
 				typed.GRBVar = Model.GetVarByName(typed.Name);
 			}
 		}
