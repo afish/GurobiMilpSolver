@@ -85,6 +85,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\GurobiMilpSolverSettings.cs" />
     <Compile Include="Implementation\GurobiMilpSolver.cs" />
     <Compile Include="Implementation\GurobiVariable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
