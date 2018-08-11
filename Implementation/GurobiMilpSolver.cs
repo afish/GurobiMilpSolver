@@ -4,10 +4,11 @@ using System.Reflection;
 using Gurobi;
 using MilpManager.Abstraction;
 using MilpManager.Implementation;
+using MilpManager.Utilities;
 
 namespace GurobiMilpManager.Implementation
 {
-	public class GurobiMilpSolver : BaseMilpSolver, IDisposable
+	public class GurobiMilpSolver : PersistableMilpSolver, IDisposable
 	{
 		static GurobiMilpSolver()
 		{
