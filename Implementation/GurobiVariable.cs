@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Gurobi;
 using MilpManager.Abstraction;
 
@@ -22,12 +23,13 @@ namespace GurobiMilpManager.Implementation
 		public string Name { get; set; }
 		public double? ConstantValue { get; set; }
 		public string Expression { get; set; }
+	    public ICollection<string> Constraints { get; } = new List<string>();
 
-		public GRBVar GRBVar
+        public GRBVar GRBVar
 		{
-			get { return _grbVar; }
-			set { _grbVar = value; }
-		}
+			get => _grbVar;
+            set => _grbVar = value;
+        }
 	}
 
 	public static class GurobiVariableExtensions
