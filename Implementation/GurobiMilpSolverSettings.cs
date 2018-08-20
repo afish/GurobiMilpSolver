@@ -5,10 +5,22 @@ namespace GurobiMilpManager.Implementation
 {
 	public class GurobiMilpSolverSettings : MilpManagerSettings
 	{
-		public GurobiMilpSolverSettings()
+	    public GurobiMilpSolverSettings()
+	    {
+	        Environment = new GRBEnv();
+	        Model = new GRBModel(Environment);
+	    }
+
+	    public GurobiMilpSolverSettings(GRBEnv environment)
+	    {
+	        Environment = environment;
+	        Model = new GRBModel(Environment) ;
+	    }
+
+        public GurobiMilpSolverSettings(GRBEnv environment, GRBModel model)
 		{
-			Environment = new GRBEnv();
-			Model = new GRBModel(Environment);
+			Environment = environment;
+			Model = model;
 		}
 
 		public GRBEnv Environment { get; }

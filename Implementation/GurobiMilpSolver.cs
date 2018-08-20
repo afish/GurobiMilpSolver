@@ -3,7 +3,6 @@ using System.IO;
 using System.Reflection;
 using Gurobi;
 using MilpManager.Abstraction;
-using MilpManager.Implementation;
 using MilpManager.Utilities;
 
 namespace GurobiMilpManager.Implementation
