@@ -78,9 +78,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\net40\Gurobi65.NET.dll</HintPath>
     </Reference>
-    <Reference Include="MilpManager, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MilpManager.2.1.0.0\lib\net40\MilpManager.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MilpManager, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MilpManager.3.0.0.0\lib\net40\MilpManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
