@@ -34,9 +34,9 @@ namespace GurobiMilpManager.Implementation
 
 	public static class GurobiVariableExtensions
 	{
-		public static GurobiVariable Typed(this IVariable variable)
+		public static IGurobiVariable Typed(this IVariable variable)
 		{
-			return variable as GurobiVariable;
+			return variable as IGurobiVariable;
 		}
 
 		public static GRBVar Var(this IVariable variable)
